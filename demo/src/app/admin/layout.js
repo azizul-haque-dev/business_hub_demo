@@ -1,37 +1,41 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-export default function AdminLayout({
-  children,
-}) {
+export default function AdminLayout({ children }) {
   return (
     <div className="min-h-screen bg-gray-100 flex">
       {/* Admin Sidebar */}
       <aside className="w-64 bg-gray-900 text-white p-6">
         <h2 className="text-2xl font-bold mb-8">Admin Panel</h2>
         <nav className="space-y-4">
-          <Link 
-            href="/admin" 
+          <Link
+            href="/admin"
             className="block py-2 px-4 rounded hover:bg-gray-700 transition"
           >
             📊 Dashboard
           </Link>
-          <Link 
-            href="/admin/users" 
+          <Link
+            href="/admin/users"
             className="block py-2 px-4 rounded hover:bg-gray-700 transition"
           >
             👥 Users
           </Link>
-          <Link 
-            href="/admin/posts" 
+          <Link
+            href="/admin/posts"
             className="block py-2 px-4 rounded hover:bg-gray-700 transition"
           >
             📦 Posts
           </Link>
-          <Link 
-            href="/admin/pengings" 
+          <Link
+            href="/admin/pengings"
             className="block py-2 px-4 rounded hover:bg-gray-700 transition"
           >
             Pendings
+          </Link>
+          <Link
+            href="/"
+            className="block py-2 px-4 rounded hover:bg-gray-700 transition"
+          >
+            Got to user page
           </Link>
         </nav>
       </aside>
@@ -49,10 +53,8 @@ export default function AdminLayout({
         </header>
 
         {/* Admin Main Content */}
-        <main className="p-6">
-          {children}
-        </main>
+        <main className="p-6">{children}</main>
       </div>
     </div>
-  )
+  );
 }

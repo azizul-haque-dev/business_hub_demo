@@ -11,8 +11,8 @@ export default function UserLayout({ children }) {
             <Link href="/" className="text-gray-700 hover:text-blue-600">
               home
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600">
-              about
+            <Link href="/posts" className="text-gray-700 hover:text-blue-600">
+              Blogs
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-blue-600">
               contact
